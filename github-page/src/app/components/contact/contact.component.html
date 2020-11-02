@@ -1,0 +1,17 @@
+<div class="_article">
+    <h2>Contact Information</h2>
+    <mat-divider></mat-divider>
+    <mat-card style="width: 600px; ">
+      <mat-card-content *ngFor="let item of contact | keyvalue">
+        <div>
+
+          {{item.key}}: <strong>{{item.value}}</strong>
+          <mat-button-toggle-group>
+            <mat-button-toggle (click)="copyClip(item.value)">
+              <mat-icon>content_copy</mat-icon><small>copy</small>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </mat-card-content>
+    </mat-card>
+</div>

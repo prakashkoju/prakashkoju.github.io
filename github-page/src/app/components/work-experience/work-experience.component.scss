@@ -1,0 +1,11 @@
+// p{
+//   text-indent: 10%;
+// }
+
+::ng-deep .mat-horizontal-stepper-content[aria-expanded="false"] {
+  width: 1200px !important;
+}
+
+table{
+  width: 100%;
+}

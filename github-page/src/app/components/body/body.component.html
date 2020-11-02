@@ -1,0 +1,29 @@
+<mat-sidenav-container >
+  <mat-sidenav class="_sidenav"
+    #sidenav mode="side"
+    [(opened)]="expand"
+    [fixedInViewport]="true"
+    >
+    <img src='/assets/profilepicture.jpg'/>
+
+      <div *ngFor="let topic of topics" ><a routerLink={{topic.path}} mat-raised-button>{{topic.title}}</a></div>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="_sidenav-content">
+      <a class="_a" (click)="sidenav.toggle()">
+        <span *ngIf="expand;then expanded else shrink"></span>
+      </a>
+      <div class="_mainSideContent">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<ng-template #expanded><mat-icon>switch_left</mat-icon></ng-template>
+<ng-template #shrink><mat-icon>switch_right</mat-icon></ng-template>

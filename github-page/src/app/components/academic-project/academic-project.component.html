@@ -1,0 +1,10 @@
+<div class="_article">
+    <h2>Academic Project</h2>
+    <mat-divider></mat-divider>
+    <div *ngFor="let project of projects, index as i">
+      <hr/>
+      <mat-card-header>{{++i+") "+project.title}}</mat-card-header>
+      <mat-card-content><p>{{project.description}}</p></mat-card-content>
+      <mat-card-content><p>Technologies used: {{project.technology}}</p></mat-card-content>
+    </div>
+</div>

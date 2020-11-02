@@ -1,0 +1,38 @@
+._sidenav-content {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+._mainSideContent{
+  padding: 20px;
+  margin-bottom: 40px;
+  position: static;
+}
+
+._sidenav {
+  font-size: 20px;
+  padding: 20px;
+  align: center;
+}
+
+._sidenav img{
+  width: 200px;
+}
+
+._a{
+  border: 1px solid gray;
+  color: green;
+  // border-left: 0px;
+  // padding-right: 5px;
+  border-radius: 50%;
+  padding:3px 5px 0;
+  position: fixed;
+  top: 10%;
+  left:50%;
+
+}
+
+

@@ -1,0 +1,15 @@
+<div class="_article">
+    <h2>References</h2>
+    <hr/>
+    <div>
+      <button mat-raised-button (click)="showInput()">Request</button>
+      <div class="_container" *ngIf="requested">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="_article">
+    <h2>Education</h2>
+    <hr/>
+    <div class="tilefix">
+
+      <mat-accordion *ngFor="let degree of degrees" multi>
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{degree.title}}</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-divider></mat-divider>
+          <p>Degree: {{degree.degree}}</p>
+          <p>Field: {{degree.field}}</p>
+          <p>From: {{degree.from | date:'yyyy/MM'}}</p><p>To: {{degree.to | date:'yyyy/MM'}} <span *ngIf="!degree.completed"> (Expected)</span></p>
+
+
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </div>
+</div>
+
